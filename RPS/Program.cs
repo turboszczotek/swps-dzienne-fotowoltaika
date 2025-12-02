@@ -22,7 +22,12 @@ string GetCorrectRandomSign(string playerName)
 }
 
 const StringComparison stringComparison = StringComparison.OrdinalIgnoreCase;
+int firstPlayerPoints = 0;
+int secondPlayerPoints = 0;
 
+while (true)
+
+{
 Console.WriteLine("Let's play Rock-Paper-Scissors!");
 
 string firstSign = GetCorrectSign("Player 1");
@@ -43,8 +48,18 @@ if (firstSign.Equals(secondSign, stringComparison))
 else if (firstSignIndex == winningSignIndex)
 {
     Console.WriteLine("First player won!");
+    //firstPlayerPoints = firstPlayerPoints + 1;
+    //firstPlayerPoints +=1;
+    firstPlayerPoints++;
 }
 else
 {
     Console.WriteLine("Second player won!");
+    secondPlayerPoints +=1;
 }
+
+Console.WriteLine($"First player: {firstPlayerPoints}");
+Console.WriteLine($"Second player: {secondPlayerPoints}");
+
+}
+
